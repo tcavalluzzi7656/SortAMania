@@ -2,7 +2,7 @@ public class Team1SortCompetition extends SortCompetition {
     @Override
     public int challengeOne(int[] arr)
     {
-        util.insertionSort(arr);
+        util.mergeSort(arr);
         return util.findMedian(arr);
     }
 
