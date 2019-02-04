@@ -1,7 +1,14 @@
 public class util {
 
 
-
+    public static void printArr(int[] arr)
+    {
+        for(int x =0;x<arr.length;x++)
+        {
+            System.out.print(arr[x]+" ");
+        }
+        System.out.println();
+    }
 
 
     public static void intswap(int[] arr,int i, int j)

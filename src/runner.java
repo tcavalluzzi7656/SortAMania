@@ -5,17 +5,26 @@ public class runner {
         int[] randomIntArr = util.randIntArr(10000);
         String[] randStringArr = util.randStringArr(10000, 5);
 
+
+
+
+
         System.out . println("Unsorted");
-        printArr(randIntArr);
+        util.printArr(randomIntArr);
 
         long time = System.currentTimeMillis();
-        int median = team1.challengeOne(randIntArr);
+        int median = team1.challengeOne(randomIntArr);
         time = System.currentTimeMillis() - time;
         System.out.println("Challenge One Time Taken: " + time * 0.0001 + " Seconds");
         System.out.println("Median equals: " + median);
 
         System.out.println("All Sorted!");
-        printArr(randIntArr);
+        util.printArr(randomIntArr);
+
+
+
+
+
     }
 
 }
