@@ -10,10 +10,19 @@ public class Team1SortCompetition extends SortCompetition {
     public int challengeTwo(String[] arr, String query) {
         return 0;
     }
+    {
+        util.insertionSort(String);
+        return
+    }
+
 
     @Override
     public int challengeThree(int[] arr) {
         return 0;
+    }
+    {
+        util.insertionSort(int);
+        return util.findMedian(int);
     }
 
     @Override

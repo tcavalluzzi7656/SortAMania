@@ -165,11 +165,6 @@ public class util {
 
 
 
-
-
-
-
-
     public static void doubleswap(double[] arr,int i, int j)
     {
         double temp;
@@ -280,7 +275,22 @@ public class util {
         int med;
         if(arr.length%2==0)
         {
-            med=(arr[arr.length/2]+arr[arr.length/2+1])/2;
+            med=(arr[arr.length/2]+arr[arr.length/2+1])/2; //rounding down//
+        }
+        else
+        {
+            med=(arr[arr.length/2]);
+        }
+        return med;
+    }
+
+    public static int medianofMedians(int[] arr)
+    {
+        int med;
+        for(int i = 0; i < numofMedians; i++) //make numofMedians //
+        if(arr.length%2==0)
+        {
+            med=(arr[arr.length/2]+arr[arr.length/2+1])/2; //rounding down//
         }
         else
         {
