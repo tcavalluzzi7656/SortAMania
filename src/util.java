@@ -11,6 +11,16 @@ public class util {
     }
 
 
+    public static void strprintArr(String[] arr)
+    {
+        for(int x =0;x<arr.length;x++)
+        {
+            System.out.print(arr[x]+" ");
+        }
+        System.out.println();
+    }
+
+
     public static void intswap(int[] arr,int i, int j)
     {
         int temp;
@@ -104,6 +114,102 @@ public class util {
             elements[k] = temp[k];
         }
     }
+
+
+
+
+
+
+
+
+    public static int queryCheck(String str, String[] arr)
+    {
+        int x = 0;
+        int fin = -1;
+        boolean done=false;
+       while(!done)
+        {
+            if(arr[x].equals(str))
+            {
+                x=fin;
+                done=true;
+
+            }
+
+
+            x++;
+
+        }
+        return fin;
+    }
+
+
+
+
+
+    public static void strmergeSort(String[] elements) {
+        int n = elements.length;
+        String[] temp = new String[n];
+        strmergeSortHelper(elements, 0, n - 1, temp);
+    }
+
+
+
+    private static void strmergeSortHelper(String[] elements,
+                                        int from, int to, String[] temp)
+    {
+        if (from < to)
+        {
+            int middle = (from + to) / 2;
+            strmergeSortHelper(elements, from, middle, temp);
+            strmergeSortHelper(elements, middle + 1, to, temp);
+            strmerge(elements, from, middle, to, temp);
+        }
+    }
+
+
+
+    private static void strmerge(String[] elements,
+                              int from, int mid, int to, String[] temp)
+    {
+        int i = from;
+        int j = mid + 1;
+        int k = from;
+        while (i <= mid && j <= to)
+        {
+            if (elements[i].compareTo( elements[j])<0)
+            {
+                temp[k] = elements[i];
+                i++;
+            }
+            else
+            {
+                temp[k] = elements[j];
+                j++;
+            }
+            k++;
+        }
+
+        while (i <= mid)
+        {
+            temp[k] = elements[i];
+            i++;
+            k++;
+        }
+        while (j <= to)
+        {
+            temp[k] = elements[j];
+            j++;
+            k++;
+        }
+        for (k = from; k <= to; k++)
+        {
+            elements[k] = temp[k];
+        }
+    }
+
+
+
 
 
 

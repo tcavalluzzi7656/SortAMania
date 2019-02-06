@@ -7,8 +7,10 @@ public class Team1SortCompetition extends SortCompetition {
     }
 
     @Override
-    public int challengeTwo(String[] arr, String query) {
-        return 0;
+    public int challengeTwo(String[] arr, String query)
+    {
+        util.strmergeSort(arr);
+        return util.queryCheck(query, arr);
     }
 
     @Override
