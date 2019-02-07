@@ -122,26 +122,20 @@ public class util {
 
 
 
-    public static int queryCheck(String str, String[] arr)
-    {
+    public static int queryCheck(String str, String[] arr) {
         int x = 0;
         int fin = -1;
-        boolean done=false;
-       while(!done)
-        {
-            if(arr[x].equals(str))
-            {
-                x=fin;
-                done=true;
 
+        for (boolean done = false; x < arr.length; x++) {
+            if ((arr[x].equals(str))) {
+                if (fin == -1) {
+                    fin = x;
+                }
             }
-
-
-            x++;
-
         }
         return fin;
     }
+
 
 
 
@@ -390,6 +384,8 @@ public class util {
         return med;
     }
 
+
+    /*
     public static int medianofMedians(int[] arr)
     {
         int med;
@@ -404,6 +400,6 @@ public class util {
         }
         return med;
     }
-
+*/
 
 }

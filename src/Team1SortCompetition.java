@@ -12,19 +12,14 @@ public class Team1SortCompetition extends SortCompetition {
         util.strmergeSort(arr);
         return util.queryCheck(query, arr);
     }
-    {
-        util.insertionSort(String);
-        return
-    }
+
 
 
     @Override
-    public int challengeThree(int[] arr) {
-        return 0;
-    }
+    public int challengeThree(int[] arr)
     {
-        util.insertionSort(int);
-        return util.findMedian(int);
+        util.insertionSort(arr);
+        return util.findMedian(arr);
     }
 
     @Override
