@@ -4,8 +4,9 @@ public class runner {
         SortCompetition team1 = new Team1SortCompetition();
         int[] randomIntArr = util.randIntArr(10000);
         String[] randStringArr = util.randStringArr(10000, 5);
+        Comparable[] randThingyArr=util.randThingyArr(10000);
         String str = "abcde";
-
+        Comparable thingy = new Thingy();
 
 
 /*
@@ -40,7 +41,7 @@ public class runner {
 */
 
 
-
+/*
         System.out . println("Unsorted");
         util.printArr(randomIntArr);
 
@@ -49,6 +50,21 @@ public class runner {
         time = System.currentTimeMillis() - time;
         System.out.println("Challenge Three Time Taken: " + time * 0.0001 + " Seconds");
         System.out.println("Median equals: " + median);
+
+        System.out.println("All Sorted!");
+        util.printArr(randomIntArr);
+*/
+
+
+
+        System.out . println("Unsorted");
+        util.thingyprintArr(randThingyArr);
+
+        long time = System.currentTimeMillis();
+        int thingyPos=team1.challengeFive(randThingyArr,thingy);
+        time = System.currentTimeMillis() - time;
+        System.out.println("Challenge Five Time Taken: " + time * 0.0001 + " Seconds");
+        System.out.println("First index of given Thingy: " + thingyPos);
 
         System.out.println("All Sorted!");
         util.printArr(randomIntArr);

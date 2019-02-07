@@ -21,6 +21,112 @@ public class util {
     }
 
 
+    public static void thingyprintArr(Comparable[] arr)
+    {
+        for(int x =0;x<arr.length;x++)
+        {
+            System.out.print(arr[x]+" ");
+        }
+        System.out.println();
+    }
+
+
+
+
+
+
+
+
+    public static Comparable[] randThingyArr(int count)
+    {
+        Comparable[] things = new Comparable[count];
+        for (int x=0;x<count;x++)
+        {
+            things[x]=new Thingy();
+        }
+        return things;
+    }
+
+
+
+    public static void thingymergeSort(Comparable[] elements) {
+        int n = elements.length;
+        Comparable[] temp = new Comparable[n];
+        thingymergeSortHelper(elements, 0, n - 1, temp);
+    }
+
+
+
+    private static void thingymergeSortHelper(Comparable[] elements,
+                                        int from, int to, Comparable[] temp)
+    {
+        if (from < to)
+        {
+            int middle = (from + to) / 2;
+            thingymergeSortHelper(elements, from, middle, temp);
+            thingymergeSortHelper(elements, middle + 1, to, temp);
+            thingymerge(elements, from, middle, to, temp);
+        }
+    }
+
+
+
+    private static void thingymerge(Comparable[] elements,
+                              int from, int mid, int to, Comparable[] temp)
+    {
+        int i = from;
+        int j = mid + 1;
+        int k = from;
+        while (i <= mid && j <= to)
+        {
+            if (elements[i].compareTo(elements[j])<0)
+            {
+                temp[k] = elements[i];
+                i++;
+            }
+            else
+            {
+                temp[k] = elements[j];
+                j++;
+            }
+            k++;
+        }
+
+        while (i <= mid)
+        {
+            temp[k] = elements[i];
+            i++;
+            k++;
+        }
+        while (j <= to)
+        {
+            temp[k] = elements[j];
+            j++;
+            k++;
+        }
+        for (k = from; k <= to; k++)
+        {
+            elements[k] = temp[k];
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public static void intswap(int[] arr,int i, int j)
     {
         int temp;
@@ -123,10 +229,10 @@ public class util {
 
 
     public static int queryCheck(String str, String[] arr) {
-        int x = 0;
+
         int fin = -1;
 
-        for (boolean done = false; x < arr.length; x++) {
+        for (int x = 0; x < arr.length; x++) {
             if ((arr[x].equals(str))) {
                 if (fin == -1) {
                     fin = x;
@@ -136,6 +242,20 @@ public class util {
         return fin;
     }
 
+
+    public static int thingyqueryCheck(Comparable thingy, Comparable[] arr) {
+
+        int fin = -1;
+
+        for (int x = 0; x < arr.length; x++) {
+            if ((arr[x].compareTo(thingy))==0) {
+                if (fin == -1) {
+                    fin = x;
+                }
+            }
+        }
+        return fin;
+    }
 
 
 

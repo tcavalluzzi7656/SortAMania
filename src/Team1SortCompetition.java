@@ -29,7 +29,8 @@ public class Team1SortCompetition extends SortCompetition {
 
     @Override
     public int challengeFive(Comparable[] arr, Comparable query) {
-        return 0;
+        util.thingymergeSort(arr);
+        return util.thingyqueryCheck(query,arr);
     }
 
     @Override
