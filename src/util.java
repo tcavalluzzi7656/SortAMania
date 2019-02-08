@@ -21,14 +21,6 @@ public class util {
     }
 
 
-    public static void thingyprintArr(Comparable[] arr)
-    {
-        for(int x =0;x<arr.length;x++)
-        {
-            System.out.print(arr[x]+" ");
-        }
-        System.out.println();
-    }
 
 
 
@@ -74,6 +66,7 @@ public class util {
     private static void thingymerge(Comparable[] elements,
                               int from, int mid, int to, Comparable[] temp)
     {
+
         int i = from;
         int j = mid + 1;
         int k = from;
@@ -111,6 +104,14 @@ public class util {
     }
 
 
+    public static void thingyprintArr(Comparable[] arr)
+    {
+        for(int x =0;x<arr.length;x++)
+        {
+            System.out.print(arr[x].toString() +" ");
+        }
+        System.out.println();
+    }
 
 
 

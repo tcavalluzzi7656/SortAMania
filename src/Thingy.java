@@ -4,7 +4,17 @@ public class Thingy implements Comparable<Thingy> {
 
     public Thingy()
     {
-        this.value=(int)Math.random()*10000;
+        this.value=(int)(Math.random()*10000);
+    }
+
+    public String toString()
+    {
+        return Integer.toString(this.value);
+    }
+
+    public int getValue()
+    {
+        return this.value;
     }
 
     @Override

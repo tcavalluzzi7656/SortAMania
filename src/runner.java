@@ -7,7 +7,7 @@ public class runner {
         Comparable[] randThingyArr=util.randThingyArr(10000);
         String str = "abcde";
         Comparable thingy = new Thingy();
-
+        long time;
 
 /*
         System.out . println("Unsorted");
@@ -60,7 +60,7 @@ public class runner {
         System.out . println("Unsorted");
         util.thingyprintArr(randThingyArr);
 
-        long time = System.currentTimeMillis();
+        time = System.currentTimeMillis();
         int thingyPos=team1.challengeFive(randThingyArr,thingy);
         time = System.currentTimeMillis() - time;
         System.out.println("Challenge Five Time Taken: " + time * 0.0001 + " Seconds");
