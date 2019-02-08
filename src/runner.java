@@ -55,7 +55,7 @@ public class runner {
         util.printArr(randomIntArr);
 */
 
-
+/*
 
         System.out . println("Unsorted");
         util.thingyprintArr(randThingyArr);
@@ -68,6 +68,20 @@ public class runner {
 
         System.out.println("All Sorted!");
         util.printArr(randomIntArr);
+ */
+
+        System.out . println("Unsorted");
+        util.thingyprintArr(randThingyArr);
+
+        long time = System.currentTimeMillis();
+        int thingyPos=team1.challengeFive(randIntArr);
+        time = System.currentTimeMillis() - time;
+        System.out.println("Challenge Four Time Taken: " + time * 0.0001 + " Seconds");
+        System.out.println("Median equals: " + median);
+
+        System.out.println("All Sorted!");
+        util.printArr(randomIntArr);
+
 
 
     }
