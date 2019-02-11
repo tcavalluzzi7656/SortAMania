@@ -12,10 +12,7 @@ public class Thingy implements Comparable<Thingy> {
         return Integer.toString(this.value);
     }
 
-    public int getValue()
-    {
-        return this.value;
-    }
+    public int getValue(){return this.value;}
 
     @Override
     public int compareTo(Thingy other)
