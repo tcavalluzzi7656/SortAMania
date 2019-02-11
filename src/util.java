@@ -507,21 +507,33 @@ public class util {
     }
 
 
-    /*
-    public static int medianofMedians(int[] arr)
-    {
-        int med;
-        for(int i = 0; i < numofMedians; i++) //make numofMedians //
-        if(arr.length%2==0)
-        {
-            med=(arr[arr.length/2]+arr[arr.length/2+1])/2; //rounding down//
+
+    public static int medianofMedians (int[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            mergeSort(arr[i]);
         }
-        else
-        {
-            med=(arr[arr.length/2]);
+        int swap = 1;
+        while (swap == 0) {
+            swap = 0;
+            for (int i = 0; i < arr.length - 1; i++) {
+                int x = findMedian(arr[i]), y = findMedian(arr[i + 1]);
+                if (x > y) {
+                    int[] temp = arr[i];
+                    arr[i] = arr[i + 1];
+                    temp = arr[i + 1];
+                    swap++;
+                }
+            }
         }
-        return med;
+
+        int[] medianArr = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            medianArr[i] = findMedian(arr[i]);
+        }
+        return findMedian(medianArr);
     }
-*/
+
+
+
 
 }

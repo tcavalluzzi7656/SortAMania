@@ -9,7 +9,6 @@ public class runner {
         Comparable thingy = new Thingy();
         long time;
 
-/*
         System.out . println("Unsorted");
         util.printArr(randomIntArr);
 
@@ -21,11 +20,8 @@ public class runner {
 
         System.out.println("All Sorted!");
         util.printArr(randomIntArr);
-*/
 
 
-
-/*
         System.out . println("Unsorted");
         util.strprintArr(randStringArr);
 
@@ -38,10 +34,7 @@ public class runner {
         System.out.println("All Sorted!");
         util.printArr(randomIntArr);
 
-*/
 
-
-/*
         System.out . println("Unsorted");
         util.printArr(randomIntArr);
 
@@ -53,9 +46,7 @@ public class runner {
 
         System.out.println("All Sorted!");
         util.printArr(randomIntArr);
-*/
 
-/*
 
         System.out . println("Unsorted");
         util.thingyprintArr(randThingyArr);
@@ -68,7 +59,7 @@ public class runner {
 
         System.out.println("All Sorted!");
         util.printArr(randomIntArr);
- */
+
 
         System.out . println("Unsorted");
         util.thingyprintArr(randThingyArr);
@@ -77,7 +68,7 @@ public class runner {
         int thingyPos=team1.challengeFive(randIntArr);
         time = System.currentTimeMillis() - time;
         System.out.println("Challenge Four Time Taken: " + time * 0.0001 + " Seconds");
-        System.out.println("Median equals: " + median);
+        System.out.println("Median equals: " + findMedian);
 
         System.out.println("All Sorted!");
         util.printArr(randomIntArr);
