@@ -34,8 +34,9 @@ public class Team1SortCompetition extends SortCompetition {
         {
             med[i]=findMedian(arr[i]);
         }
-        med=insertionSort(med);
-        return findMedian(med);
+        insertionSort(med);
+        int median = (med[(med.length/2)-1]+med[med.length/2])/2;
+        return median;
     }
 
 
@@ -415,12 +416,6 @@ public class Team1SortCompetition extends SortCompetition {
         arr[i]=arr[j];
         arr[j]=temp;
     }
-
-
-
-
-
-
 
 
 

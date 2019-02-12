@@ -2,8 +2,8 @@ public class runner {
 
     public static void main(String[] args) {
         SortCompetition team1 = new Team1SortCompetition();
-        int[] randomIntArr = Team1SortCompetition.randIntArr(10000);
-        int[][] randomIntArr2 = Team1SortCompetition.randIntArr2(1000);
+        int[] randomIntArr = Team1SortCompetition.randIntArr(10);
+        int[][] randomIntArr2 = Team1SortCompetition.randIntArr2(10);
         String[] randStringArr = Team1SortCompetition.randStringArr(10000, 5);
         Comparable[] randThingyArr=Team1SortCompetition.randThingyArr(10000);
         String str = "abcde";
@@ -59,7 +59,6 @@ public class runner {
 
 
 
-/*
 
         System.out . println("Unsorted");
         Team1SortCompetition.printArr2(randomIntArr2);
@@ -75,8 +74,7 @@ public class runner {
 
         System.out.println("All Sorted!");
         Team1SortCompetition.printArr2(randomIntArr2);
-
-*/
+        /*
 
 
 
@@ -94,8 +92,7 @@ public class runner {
 
         System.out.println("All Sorted!");
         Team1SortCompetition.printArr(randomIntArr);
-
-
+        */
     }
 
 }
